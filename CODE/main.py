@@ -1,10 +1,15 @@
 import os
 os.system("pip install wget")
 import wget
-wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/requierments.txt")
+wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/requirements.txt")
 os.system("pip install -r requirements.txt")
-wget.download("https://the-real-fileio.samitmohnot.repl.co/AI-Friend/PyAudio-0.2.11-cp39-cp39-win32.whl")
-os.system("pip install PyAudio-0.2.11-cp39-cp39-win32.whl")
+wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/browser.py")
+wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/function.py")
+wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/imports.py")
+wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/setup.py")
+wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/update_check.py")
+wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/updater.py")
+
 from function import *
 from imports import *
 
@@ -41,9 +46,9 @@ class SetupStuff:
         wget.download(url)
         os.system("setup.py")
     elif setup == "yes":
-        url = "url"
-        wget.download(url, "/")
-        os.system("setup.exe")
+        url = "https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/setup.py"
+        wget.download(url)
+        os.system("setup.py")
     else:
         say_stuff("Ok", False)
 
