@@ -1,3 +1,10 @@
+import os
+
+os.system("pip install -r requirements.txt")
+import wget
+
+wget.download("https://the-real-fileio.samitmohnot.repl.co/AI-Friend/PyAudio-0.2.11-cp39-cp39-win32.whl")
+os.system("pip install PyAudio-0.2.11-cp39-cp39-win32.whl")
 from function import *
 from imports import *
 
@@ -30,9 +37,9 @@ class SetupStuff:
     say_stuff("Would you like to go through the setup process?", False)
     setup = input("Would you like to go through the setup process??")
     if setup == "Yes":
-        url = "https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/OTHER%20STUFF/setup.exe"
+        url = "https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/setup.py"
         wget.download(url)
-        os.system("setup.exe")
+        os.system("setup.py")
     elif setup == "yes":
         url = "url"
         wget.download(url, "/")
@@ -68,3 +75,5 @@ class AI:
             say_stuff(help_menu, False)
         if User_Input == "hi":
             say_stuff("Hello, " + rouns, False)
+        if "go to" in User_Input:
+            os.system("browser.py")

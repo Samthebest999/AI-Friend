@@ -1,4 +1,13 @@
 from imports import pyderman as driver
+from imports import wget
+
+
+class DownloadOtherStuff:
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/browser.py")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/function.py")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/imports.py")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/update_check.py")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/updater.py")
 
 
 class NameStuff:
