@@ -1,8 +1,8 @@
 import os
-
-os.system("pip install -r requirements.txt")
+os.system("pip install wget")
 import wget
-
+wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/requierments.txt")
+os.system("pip install -r requirements.txt")
 wget.download("https://the-real-fileio.samitmohnot.repl.co/AI-Friend/PyAudio-0.2.11-cp39-cp39-win32.whl")
 os.system("pip install PyAudio-0.2.11-cp39-cp39-win32.whl")
 from function import *
