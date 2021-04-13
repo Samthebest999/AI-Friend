@@ -1,2 +1,4 @@
 # AI Friend
-A friendly AI Friend (as of 2/27/2021 in alpha 0.1 stage)
+A friendly AI Friend:
+## Get the latest release from the releases tab!
+DO NOT GET PRERELEASE VERSIONS: THEY ARE BROKEN!!
