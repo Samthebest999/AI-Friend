@@ -6,7 +6,6 @@ if os.path.exists("setup.py"):
 if os.path.exists("updater.py"):
     os.remove("updater.py")
     wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/updater.py")
-from imports import wget, os
 
 
 def update():
@@ -32,7 +31,7 @@ def recognize_speech():
         global users_text
         users_text = r.recognize_google(audio)
 
-
+update()
 # TODO GET A BETTER NAME FOR THE PROGRAM!
 
 class VoiceRecogError(Exception):
@@ -65,3 +64,5 @@ class AI:
             say_stuff("Hello, " + rouns, False)
         if user_input == "browser":
             os.system("python browser.py")
+        if user_input == "update":
+            update()
