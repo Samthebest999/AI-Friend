@@ -4,14 +4,13 @@ import wget
 
 
 class DownloadRequiredFiles:
-    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/browser.py")
-    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/function.py")
-    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/imports.py")
-    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/main.py")
-    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/requirements.txt")
-    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/version.toml")
-    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/update_check.py")
-    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/updater.py")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/browser.py")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/functions.py")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/imports.py")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/main.py")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/requirements.txt")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/version.toml")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/updater.py")
     print("Please Wait as I install the important packages needed...")
     os.system("pip install -r requirements.txt && pipwin refresh && pipwin install pyaudio ")
 
