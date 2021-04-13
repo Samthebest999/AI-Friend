@@ -6,3 +6,4 @@ playsound
 speechrecognition
 toml
 pipwin
+pyautogui

@@ -1,7 +1,9 @@
-from functions import say_stuff
-from imports import os, sr
+import pyautogui
 
-browser = str(open("browser.txt", "rt"))
+from functions import say_stuff
+from imports import sr
+
+browser = str(open("browser.txt", "rt").read())
 
 
 def recognize_speech():
@@ -17,4 +19,6 @@ def recognize_speech():
 say_stuff("Hi, Which website would you like to go to?", False)
 recognize_speech()
 website = " https://" + users_text
-os.system(browser + website)
+pyautogui.hotkey("winleft", "r")
+pyautogui.write(browser + website)
+pyautogui.press("enter")
