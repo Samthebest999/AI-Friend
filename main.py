@@ -5,14 +5,14 @@ if os.path.exists("setup.py"):
     os.remove("setup.py")
 if os.path.exists("updater.py"):
     os.remove("updater.py")
-    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/updater.py")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/updater.py")
 
 
 def update():
     open_toml = open("version.toml", "r").read()
     if os.path.exists("version.toml"):
         os.remove("version.toml")
-    vtu = "https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/CODE/version.toml"
+    vtu = "https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/version.toml"
     wget.download(vtu)
     new_open_toml = open("version.toml", "r").read()
     if open_toml == new_open_toml:
