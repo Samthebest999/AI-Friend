@@ -1,7 +1,7 @@
 import pyautogui
 
 from functions import say_stuff
-from imports import sr
+from imports import sr, time
 
 browser = str(open("browser.txt", "rt").read())
 
@@ -20,5 +20,7 @@ say_stuff("Hi, Which website would you like to go to?", False)
 recognize_speech()
 website = " https://" + users_text
 pyautogui.hotkey("winleft", "r")
+time.sleep(0.50)
 pyautogui.write(browser + website)
+time.sleep(0.50)
 pyautogui.press("enter")
