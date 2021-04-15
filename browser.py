@@ -21,6 +21,8 @@ recognize_speech()
 website = " https://" + users_text
 pyautogui.hotkey("winleft", "r")
 time.sleep(0.50)
+pyautogui.hotkey("ctrl", "a")
+pyautogui.press("backspace")
 pyautogui.write(browser + website)
 time.sleep(0.50)
 pyautogui.press("enter")
