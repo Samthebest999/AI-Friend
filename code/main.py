@@ -5,7 +5,7 @@ if os.path.exists("setup.py"):
     os.remove("setup.py")
 if os.path.exists("updater.py"):
     os.remove("updater.py")
-    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/updater.py")
+    wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/updater.py")
 
 
 def update():

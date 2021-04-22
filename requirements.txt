@@ -1,9 +1,0 @@
-pip
-setuptools
-wget
-gtts
-playsound
-speechrecognition
-toml
-pipwin
-pyautogui
