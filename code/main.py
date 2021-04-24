@@ -1,3 +1,5 @@
+import os
+
 from functions import *
 from imports import *
 
@@ -12,13 +14,14 @@ def update():
     open_toml = open("version.toml", "r").read()
     if os.path.exists("version.toml"):
         os.remove("version.toml")
-    vtu = "https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/version.toml"
+    vtu = "https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/version.toml"
     wget.download(vtu)
     new_open_toml = open("version.toml", "r").read()
     if open_toml == new_open_toml:
         pass
     if open_toml != new_open_toml:
-        os.system("python updater.py")
+        working_dir = os.getcwd()
+        os.system(working_dir + "\\python\\python.exe updater.py")
         quit(say_stuff("Updating...", False))
 
 
@@ -56,13 +59,14 @@ class AI:
                         "your accent, or just program couldn't recognize your voice")
         user_input = users_text
         if user_input == "help":
-            helpdict = {"Hi": "Says Hi", "browser": "go to the website of your choice"}
+            helpdict = {"Hi": "Says Hello back to you", "browser": "go to the website of your choice"}
             help_menu = """Hi Welcome To The Help Menu!\n""" + helpdict
             print(help_menu)
             say_stuff(help_menu, False)
         if user_input == "hi":
             say_stuff("Hello, " + rouns, False)
         if user_input == "browser":
-            os.system("python browser.py")
+            working_dir = os.getcwd()
+            os.system(working_dir + "\\python\\python.exe browser.py")
         if user_input == "update":
             update()

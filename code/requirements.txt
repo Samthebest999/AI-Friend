@@ -2,3 +2,4 @@ wget
 gtts
 playsound
 pyautogui
+pip

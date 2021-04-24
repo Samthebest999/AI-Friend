@@ -1,6 +1,15 @@
 import os
-os.remove("setup.exe.py")
-os.system("pip3 install wget")
+
+os.remove("setup/setup.exe.py")
+
+
+def install(package):
+    import subprocess
+    import sys
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+
+install("wget")
 import wget
 
 
