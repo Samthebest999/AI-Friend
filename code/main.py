@@ -1,5 +1,3 @@
-import os
-
 from functions import *
 from imports import *
 
@@ -34,7 +32,10 @@ def recognize_speech():
         global users_text
         users_text = r.recognize_google(audio)
 
+
 update()
+
+
 # TODO GET A BETTER NAME FOR THE PROGRAM!
 
 class VoiceRecogError(Exception):
@@ -54,13 +55,14 @@ class AI:
             raise VoiceRecogError(say_stuff(
                 "Microphone error, Possible reasons: Too much background noise, microphone off, couldn't hear you, "
                 "your accent, or just program couldn't recognize your voice",
-                False), "Microphone error, Possible reasons: Too much background noise, microphone off, couldn't hear "
-                        "you, "
-                        "your accent, or just program couldn't recognize your voice")
+                False), "Microphone error! Possible reasons: Too much background noise, Your microphone is off, "
+                        "Something blocking your microphone? "
+                        "or"
+                        "your accent, Maybe I couldn't recognize your voice?")
         user_input = users_text
         if user_input == "help":
             helpdict = {"Hi": "Says Hello back to you", "browser": "go to the website of your choice"}
-            help_menu = """Hi Welcome To The Help Menu!\n""" + helpdict
+            help_menu = """Hi Welcome To The Help Menu!\n""" + str(helpdict)
             print(help_menu)
             say_stuff(help_menu, False)
         if user_input == "hi":

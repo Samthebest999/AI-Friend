@@ -1,18 +1,12 @@
 import os
-
-os.remove("setup/setup.exe.py")
+import wget
+os.remove("setup.exe.py")
 
 
 def install(package):
     import subprocess
     import sys
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-
-install("wget")
-import wget
-
-
 class DownloadRequiredFiles:
     wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/browser.py")
     wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/functions.py")
@@ -21,7 +15,8 @@ class DownloadRequiredFiles:
     wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/requirements.txt")
     wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/version.toml")
     wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/updater.py")
-    os.system("pip install -r requirements.txt && pipwin refresh && pipwin install pyaudio ")
+    install("-r requirements.txt")
+    os.system("pipwin refresh && pipwin install pyaudio ")
 
 
 from functions import say_stuff

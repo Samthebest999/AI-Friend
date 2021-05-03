@@ -3,3 +3,5 @@ gtts
 playsound
 pyautogui
 pip
+setuptools
+wheel
