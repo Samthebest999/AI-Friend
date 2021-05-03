@@ -1,12 +1,15 @@
 import os
 import wget
+
 os.remove("setup.exe.py")
 
 
 def install(package):
     import subprocess
     import sys
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", package])
+
+
 class DownloadRequiredFiles:
     wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/browser.py")
     wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/functions.py")
@@ -15,8 +18,8 @@ class DownloadRequiredFiles:
     wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/requirements.txt")
     wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/version.toml")
     wget.download("https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/updater.py")
-    install("-r requirements.txt")
-    os.system("pipwin refresh && pipwin install pyaudio ")
+    install("requirements.txt")
+    os.system("pipwin install pyaudio ")
 
 
 from functions import say_stuff

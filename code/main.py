@@ -9,15 +9,15 @@ if os.path.exists("updater.py"):
 
 
 def update():
-    open_toml = open("version.toml", "r").read()
+    current_toml = open("version.toml", "r").read()
     if os.path.exists("version.toml"):
         os.remove("version.toml")
     vtu = "https://raw.githubusercontent.com/Samthebest999/AI-Friend/main/code/version.toml"
     wget.download(vtu)
     new_open_toml = open("version.toml", "r").read()
-    if open_toml == new_open_toml:
+    if current_toml == new_open_toml:
         pass
-    if open_toml != new_open_toml:
+    if current_toml != new_open_toml:
         working_dir = os.getcwd()
         os.system(working_dir + "\\python\\python.exe updater.py")
         quit(say_stuff("Updating...", False))
@@ -61,8 +61,9 @@ class AI:
                         "your accent, Maybe I couldn't recognize your voice?")
         user_input = users_text
         if user_input == "help":
-            helpdict = {"Hi": "Says Hello back to you", "browser": "go to the website of your choice"}
-            help_menu = """Hi Welcome To The Help Menu!\n""" + str(helpdict)
+            help_dict = {"Hi": "Says \"Hello\" back to you", "browser": "Asks you which website you would like to "
+                                                                        "open, then opens it"}
+            help_menu = """Hi Welcome To The Help Menu!\n""" + str(help_dict)
             print(help_menu)
             say_stuff(help_menu, False)
         if user_input == "hi":
